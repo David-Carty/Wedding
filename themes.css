@@ -1,7 +1,133 @@
+.light body {
+  background: #eef0f3;
+}
+
+.light header {
+  background-color: #eef0f3;
+}
+
+.light #main-gallery {
+  background-color: #eef0f3;
+}
+
+.light .toolbutton {
+  color: black;
+  background: #ccc;
+}
+
+.light .toolbuttonhover {
+  background: #adaaaa;
+}
+
 .light .imgListWrapper .imgList {
-  background: white;
+  background: #eef0f3;
+}
+
+.light .gal-arrow-right {
+  border-left: 15px solid black;
+}
+
+.light .gal-arrow-left {
+  border-right: 15px solid black;
+}
+
+.light .arrowup {
+  border-bottom: 15px solid black;
+}
+
+.light .dropbtn .arrow-down {
+  border-top: 8px solid black;
+}
+
+.light .dropbtn .arrow-up {
+  border-bottom: 8px solid black;
+}
+
+.light .imgListWrapper .imgListHeader {
+  background: #eef0f3;
+}
+
+.light .imgListWrapper .imgListHeader .right-menu {
+  color: black;
+}
+
+.light .swatch-outer.selected {
+  background: #ccc;
+}
+
+.light .dropdown-content {
+  color: black;
+  background-color: #eef0f3;
+}
+
+.light .dropdown-content li:hover {
+  color: black;
+  background-color: #ccc;
+}
+
+.dark body {
+  background: #212934;
+}
+
+.dark header {
+  background-color: #212934;
+}
+
+.dark #main-gallery {
+  background-color: #212934;
+}
+
+.dark .toolbutton {
+  color: white;
+  background: #333942;
+}
+
+.dark .toolbuttonhover {
+  background: #485362;
 }
 
 .dark .imgListWrapper .imgList {
-  background: darkgray;
+  background: #212934;
+}
+
+.dark .gal-arrow-right {
+  border-left: 15px solid #ccc;
+}
+
+.dark .gal-arrow-left {
+  border-right: 15px solid #ccc;
+}
+
+.dark .arrowup {
+  border-bottom: 15px solid #ccc;
+}
+
+.dark .dropbtn .arrow-down {
+  border-top: 8px solid #ccc;
+}
+
+.dark .dropbtn .arrow-up {
+  border-bottom: 8px solid #ccc;
+}
+
+.dark .imgListWrapper .imgListHeader {
+  background: #11161d;
+}
+
+.dark .imgListWrapper .imgListHeader .right-menu {
+  color: white;
+}
+
+.dark .swatch-outer.selected {
+  background: #ccc;
+}
+
+.dark .dropdown-content {
+  color: white;
+  background-color: #485362;
+}
+
+.dark .dropdown-content li:hover {
+  color: black;
+  background-color: #ccc;
 }

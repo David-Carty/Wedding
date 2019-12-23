@@ -13,6 +13,7 @@ function applyEffect(effectsEl) {
     var effect = "";
     var effectLabel = "Original"
     var imgListEl = document.getElementById("imageList")
+    var imgGall = document.getElementById("image-gallery")
     var imgEl = effectsEl.querySelector("img");
     if (imgEl.classList.contains("sepia")) {
         effect = "sepia";
@@ -23,9 +24,12 @@ function applyEffect(effectsEl) {
         effectLabel = "Svartvitt";
     }
     if (effect === "") {
+        imgGall.classList.remove("effect-mono", "effect-sepia");
         imgListEl.classList.remove("effect-mono", "effect-sepia");
     } else {
+        imgGall.classList.remove("effect-mono", "effect-sepia");
         imgListEl.classList.remove("effect-mono", "effect-sepia");
+        imgGall.classList.add("effect-" + effect);
         imgListEl.classList.add("effect-" + effect);
 
     }

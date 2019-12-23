@@ -1,15 +1,141 @@
 .light {
+  body {
+    background: #eef0f3;
+  }
+
+  header {
+    background-color: #eef0f3;
+  }
+
+  #main-gallery {
+    background-color: #eef0f3;
+  }
+
+  .toolbutton {
+    color: black;
+    background: #ccc;
+    &hover {
+      background: #adaaaa;
+    }
+  }
+
   .imgListWrapper {
     .imgList {
-      background: white;
+      background: #eef0f3;
+    }
+  }
+
+  .gal-arrow-right {
+    border-left: 15px solid black;
+  }
+  .gal-arrow-left {
+    border-right: 15px solid black;
+  }
+  .arrowup {
+    border-bottom: 15px solid black;
+  }
+  .dropbtn {
+    .arrow-down {
+      border-top: 8px solid black;
+    }
+    .arrow-up {
+      border-bottom: 8px solid black;
+    }
+  }
+  .imgListWrapper {
+    .imgListHeader {
+      background: #eef0f3;
+      .right-menu {
+        color: black;
+      }
+    }
+  }
+
+  .swatch-outer {
+    &.selected {
+      background: #ccc;
+    }
+  }
+
+  .dropdown-content {
+    color: black;
+    background-color: #eef0f3;
+    li {
+      &:hover {
+        color: black;
+        background-color: #ccc;
+      }
     }
   }
 }
 
 .dark {
+  body {
+    background: #212934;
+  }
+
+  header {
+    background-color: #212934;
+  }
+
+  #main-gallery {
+    background-color: #212934;
+  }
+
+  .toolbutton {
+    color: white;
+    background: #333942;
+    &hover {
+      background: #485362;
+    }
+  }
+
   .imgListWrapper {
     .imgList {
-      background: darkgray;
+      background: #212934;
+    }
+  }
+
+  .gal-arrow-right {
+    border-left: 15px solid #ccc;
+  }
+  .gal-arrow-left {
+    border-right: 15px solid #ccc;
+  }
+  .arrowup {
+    border-bottom: 15px solid #ccc;
+  }
+  .dropbtn {
+    .arrow-down {
+      border-top: 8px solid #ccc;
+    }
+    .arrow-up {
+      border-bottom: 8px solid #ccc;
+    }
+  }
+  .imgListWrapper {
+    .imgListHeader {
+      background: #11161d;
+      .right-menu {
+        color: white;
+      }
+    }
+  }
+
+  .swatch-outer {
+    &.selected {
+      background: #ccc;
+    }
+  }
+
+  .dropdown-content {
+    color: white;
+    background-color: #485362;
+    li {
+      &:hover {
+        color: black;
+        background-color: #ccc;
+      }
     }
   }
 }

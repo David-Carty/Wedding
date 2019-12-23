@@ -6,14 +6,15 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background: black;
   overflow: hidden;
   position: relative;
 }
 
-.video-holder {
-  float: left;
-  position: relative;
+/* Always show video controls - https://stackoverflow.com/questions/32246435/always-showing-video-controls  */
+video::-webkit-media-controls-panel {
+  display: -webkit-box !important;
+  display: flex !important;
+  opacity: 1 !important;
 }
 
 /* Gallery fix */
@@ -36,18 +37,12 @@ body {
   float: left;
   width: 36px;
   height: 36px;
-  background: gold;
-}
-
-.toolbar .toolbar-left .open-list-view:hover {
-  background: pink;
 }
 
 .toolbar #left-nav {
   float: left;
   width: 36px;
   height: 36px;
-  background: blue;
   margin-left: 5px;
 }
 
@@ -57,7 +52,6 @@ body {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   margin: 2px auto auto 9px;
-  border-right: 15px solid yellow;
 }
 
 .toolbar .toolbar-right {
@@ -75,7 +69,6 @@ body {
   float: left;
   width: 40px;
   height: 36px;
-  background: blue;
 }
 
 .toolbar .toolbar-right #right-nav .gal-arrow-right {
@@ -84,7 +77,6 @@ body {
   margin: 2px auto auto 14px;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid green;
 }
 
 .toolbar .toolbar-right .exit-application {
@@ -109,10 +101,6 @@ body {
           flex-direction: column;
   height: 100%;
   margin-bottom: 40px;
-}
-
-header {
-  /* height: 73px;*/
 }
 
 main {
@@ -183,14 +171,11 @@ img.sepia {
 
 .imgListWrapper .imgListHeader {
   height: 50px;
-  background: lightblue;
 }
 
 .imgListWrapper .imgListHeader .right-menu {
   position: relative;
   float: right;
-  background-color: #4caf50;
-  color: black;
   height: 50px;
   width: 40px;
   font-size: 16px;
@@ -199,7 +184,6 @@ img.sepia {
 .imgListWrapper .imgListHeader .swatchHolder {
   position: relative;
   float: left;
-  background-color: yellow;
   height: 50px;
   width: 100px;
   padding: 0;
@@ -211,11 +195,6 @@ img.sepia {
   float: left;
   width: 50px;
   height: 50px;
-  background: lightgoldenrodyellow;
-}
-
-.imgListWrapper .imgListHeader .swatch-outer.selected {
-  background: pink;
 }
 
 .imgListWrapper .imgListHeader .swatch-outer .swatch {
@@ -230,7 +209,7 @@ img.sepia {
           transform: translateY(-50%);
   height: 21px;
   width: 21px;
-  background: red;
+  background: #333942;
   border: solid 2px black;
 }
 
@@ -242,7 +221,6 @@ img.sepia {
   -webkit-box-flex: 1;
       -ms-flex: 1 auto;
           flex: 1 auto;
-  background-color: black;
   overflow-y: auto;
   padding-bottom: 6px;
 }
@@ -385,6 +363,14 @@ img.sepia {
 
 .images-view.open {
   top: 0;
+}
+
+.arrowup {
+  width: 0;
+  height: 0;
+  margin: 8px auto auto 3px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
 .main-footer {

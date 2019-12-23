@@ -6,7 +6,7 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background: black;
+
   overflow: hidden;
   position: relative;
 }
@@ -38,11 +38,6 @@ video::-webkit-media-controls-panel {
       float: left;
       width: 36px;
       height: 36px;
-
-      background: gold;
-      &:hover {
-        background: pink;
-      }
     }
 
     .list-icon-back {
@@ -52,7 +47,7 @@ video::-webkit-media-controls-panel {
     float: left;
     width: 36px;
     height: 36px;
-    background: blue;
+
     margin-left: 5px;
     .gal-arrow-left {
       width: 0;
@@ -60,7 +55,6 @@ video::-webkit-media-controls-panel {
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
       margin: 2px auto auto 9px;
-      border-right: 15px solid yellow;
     }
   }
 
@@ -80,15 +74,13 @@ video::-webkit-media-controls-panel {
       float: left;
       width: 40px;
       height: 36px;
-      background: blue;
+
       .gal-arrow-right {
         width: 0;
         height: 0;
         margin: 2px auto auto 14px;
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
-
-        border-left: 15px solid green;
       }
     }
 
@@ -110,10 +102,6 @@ video::-webkit-media-controls-panel {
   flex-direction: column;
   height: 100%;
   margin-bottom: 40px;
-}
-
-header {
-  /* height: 73px;*/
 }
 
 main {
@@ -169,12 +157,10 @@ img.sepia {
   flex-direction: column;
   .imgListHeader {
     height: 50px;
-    background: lightblue;
+
     .right-menu {
       position: relative;
       float: right;
-      background-color: #4caf50;
-      color: black;
 
       height: 50px;
       width: 40px;
@@ -183,7 +169,7 @@ img.sepia {
     .swatchHolder {
       position: relative;
       float: left;
-      background-color: yellow;
+
       height: 50px;
       width: 100px;
       padding: 0;
@@ -194,10 +180,7 @@ img.sepia {
       float: left;
       width: 50px;
       height: 50px;
-      background: lightgoldenrodyellow;
-      &.selected {
-        background: pink;
-      }
+
       .swatch {
         position: absolute;
         cursor: pointer;
@@ -209,7 +192,7 @@ img.sepia {
         transform: translateY(-50%);
         height: 21px;
         width: 21px;
-        background: red;
+        background: #333942;
         border: solid 2px black;
         &.swatch-light {
           background: white;
@@ -219,7 +202,7 @@ img.sepia {
   }
   .imgList {
     flex: 1 auto;
-    background-color: black;
+
     overflow-y: auto;
     padding-bottom: 6px;
     .wrap-center {
@@ -396,7 +379,12 @@ img.sepia {
   }
 }
 
-.video-holder {
+.arrowup {
+  width: 0;
+  height: 0;
+  margin: 8px auto auto 3px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
 .main-footer {
