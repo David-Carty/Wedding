@@ -1,0 +1,403 @@
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: black;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-holder {
+  float: left;
+  position: relative;
+}
+
+/* Gallery fix */
+
+.fotorama__nav--dots .fotorama__nav__frame {
+  margin-bottom: 10px;
+}
+
+.toolbar {
+  .toolbar-left {
+    position: relative;
+    float: left;
+
+    height: 36px;
+    width: auto;
+    padding: 0;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    .open-list-view {
+      position: relative;
+      float: left;
+      width: 36px;
+      height: 36px;
+
+      background: gold;
+      &:hover {
+        background: pink;
+      }
+    }
+
+    .list-icon-back {
+    }
+  }
+  #left-nav {
+    float: left;
+    width: 36px;
+    height: 36px;
+    background: blue;
+    margin-left: 5px;
+    .gal-arrow-left {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      margin: 2px auto auto 9px;
+      border-right: 15px solid yellow;
+    }
+  }
+
+  .toolbar-right {
+    position: relative;
+    float: right;
+
+    height: 36px;
+    width: auto;
+    padding: 0;
+    color: black;
+
+    cursor: pointer;
+    margin: 5px 5px 0 0;
+
+    #right-nav {
+      float: left;
+      width: 40px;
+      height: 36px;
+      background: blue;
+      .gal-arrow-right {
+        width: 0;
+        height: 0;
+        margin: 2px auto auto 14px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+
+        border-left: 15px solid green;
+      }
+    }
+
+    .exit-application {
+      float: left;
+      position: relative;
+      width: auto;
+
+      .exit-icon {
+        float: left;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+.gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+header {
+  /* height: 73px;*/
+}
+
+main {
+  flex: 1;
+  background-color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.effect-mono img,
+img.mono {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+.effect-sepia img,
+img.sepia {
+  filter: sepia(1);
+}
+
+.login-view {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+
+  .pin-expander {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: lightskyblue;
+    transition: all 0.5s ease-in-out;
+
+    &.expanded {
+      top: 0px;
+      height: 150px;
+    }
+  }
+}
+
+/* Start Image List */
+.imgListWrapper {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  .imgListHeader {
+    height: 50px;
+    background: lightblue;
+    .right-menu {
+      position: relative;
+      float: right;
+      background-color: #4caf50;
+      color: black;
+
+      height: 50px;
+      width: 40px;
+      font-size: 16px;
+    }
+    .swatchHolder {
+      position: relative;
+      float: left;
+      background-color: yellow;
+      height: 50px;
+      width: 100px;
+      padding: 0;
+      margin-left: 2px;
+    }
+    .swatch-outer {
+      position: relative;
+      float: left;
+      width: 50px;
+      height: 50px;
+      background: lightgoldenrodyellow;
+      &.selected {
+        background: pink;
+      }
+      .swatch {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-50%);
+        height: 21px;
+        width: 21px;
+        background: red;
+        border: solid 2px black;
+        &.swatch-light {
+          background: white;
+        }
+      }
+    }
+  }
+  .imgList {
+    flex: 1 auto;
+    background-color: black;
+    overflow-y: auto;
+    padding-bottom: 6px;
+    .wrap-center {
+      text-align: center;
+    }
+  }
+
+  .box {
+    display: inline-block;
+    text-align: left;
+
+    position: relative;
+    width: 190px;
+    height: 104px;
+    cursor: pointer;
+  }
+  .boxInner {
+    position: absolute;
+    left: 2px;
+
+    top: 6px;
+
+    overflow: hidden;
+  }
+}
+
+/* End Image List */
+
+/* Start Close button */
+
+.x {
+  position: absolute;
+  right: 8px;
+  width: 23px;
+  height: 23px;
+  background: red;
+  top: 13px;
+}
+.x::before,
+.x::after {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 13px;
+  height: 3px;
+  content: "";
+  background-color: black;
+}
+.x::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.x::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.x:hover {
+  cursor: pointer;
+}
+.x:hover::before,
+.x:hover::after {
+  background-color: white;
+}
+
+.exit-icon .x {
+  background: red;
+  top: 8px;
+}
+
+/*End close button */
+
+/* FadeIn */
+
+.fadeIn {
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+  animation: fadein 2s;
+  opacity: 1;
+}
+.fadeOut {
+  -moz-animation: fadeout 2s; /* Firefox */
+  -webkit-animation: fadeout 2s; /* Safari and Chrome */
+  -o-animation: fadeout 2s; /* Opera */
+  animation: fadeout 2s;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fadeout */
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeout {
+  /* Firefox */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeout {
+  /* Opera */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.images-view {
+  top: 100%;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  background: #428bca;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  &.open {
+    top: 0;
+  }
+}
+
+.video-holder {
+}
+
+.main-footer {
+  min-height: 100px;
+}

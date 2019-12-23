@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding Album</title>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="themes.css">
+    <link href="fotorama.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark">
+
+    <!-- Start Login Back -->
+
+    <div class="login-back">
+
+        <div id="login-slidedown" class="login-slidetop">
+            <div id="passcode-msg" class="enter-code hidden">Slå in koden</div>
+            <form nam="frmlogin" id="login">
+                <input id="pin1" class="pin" type="password" maxlength="1"
+                    oninput="autotab(this, document.getElementById('pin2'))" />
+                <input id="pin2" class="pin" type="password" name="inputName" maxlength="1"
+                    oninput="autotab(this, document.getElementById('pin3'))" />
+                <input id="pin3" class="pin" type="password" maxlength="1"
+                    oninput="autotab(this,  document.getElementById('pin4'))" />
+                <input id="pin4" class="pin" type="password" maxlength="1"
+                    oninput="autotab(this,  document.getElementById('pin1'))" />
+            </form>
+        </div>
+        <div class="login-wrap">
+            <div class="login-header">
+                <div class="wedding-caption"></div>
+            </div>
+            <div class="login-image"><img src="assets/SoderTunaSlott.png"></div>
+            <div class="login-footer"></div>
+        </div>
+    </div>
+    <!-- End Login Back -->
+
+    <div class="gallery-wrap">
+        <header>
+            <nav>
+                <div id="image-list-nav" class="toolbar">
+                    <div class="toolbar-left">
+                        <div class="open-list-view">
+                            <div class="list-icon-back">List View</div>
+                        </div>
+                        <div id="left-nav" class="nav-but">
+                            <div class="gal-arrow-left"></div>
+                        </div>
+                    </div>
+                    <div class="toolbar-right">
+                        <div id="right-nav" class="nav-but">
+                            <div class="gal-arrow-right"></div>
+                        </div>
+                        <div class="exit-application">
+                            <div class="exit-icon">
+                                <div class="x"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+
+
+        <main id="main-gallery">
+
+            <!-- Slide gallery view goes here -->
+
+        </main>
+
+    </div>
+
+    <div id="image-list" class="images-view">
+
+        <!-- image List view Goes Here -->
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="login.min.js"></script>
+    <script src="index.min.js"></script>
+
+
+</body>
+
+</html>
