@@ -11,9 +11,10 @@ body {
   position: relative;
 }
 
-.video-holder {
-  float: left;
-  position: relative;
+/* Always show video controls - https://stackoverflow.com/questions/32246435/always-showing-video-controls  */
+video::-webkit-media-controls-panel {
+  display: flex !important;
+  opacity: 1 !important;
 }
 
 /* Gallery fix */
